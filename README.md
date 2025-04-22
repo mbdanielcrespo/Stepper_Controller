@@ -55,20 +55,6 @@ Control your motors with these simple commands:
 ...
 Type `help` for a complete list of commands.
 
-```python
-import serial
-
-# Open serial connection
-ser = serial.Serial('/dev/ttyACM0', 115200)
-
-# Move motor 0 by 100 steps
-ser.write(b'move 0 100\n')
-
-# Read response
-response = ser.readline().decode().strip()
-print(response)
-```
-
 ## 📜 License
 
 This project is [MIT](LICENSE) licensed.
