@@ -8,15 +8,6 @@ A powerful, flexible library for controlling multiple stepper motors through ser
 
 ![Stepper Motors Banner](https://raw.githubusercontent.com/wiki/arduino-libraries/Stepper/Stepper_motors.jpg)
 
-## ✨ Features
-
-- 🎮 Control up to 8 stepper motors simultaneously
-- 📊 Set precise speeds, accelerations, and positions
-- 📏 Define and enforce position limits
-- 🔄 Manual calibration for home, min, and max positions
-- 📈 Unit conversion for working with real-world units
-- 🛑 Emergency stop functionality
-- 🔌 Simple serial command interface
 
 ## 🛠️ Hardware
 
@@ -61,21 +52,8 @@ Control your motors with these simple commands:
 | `calibrate_home <motor>` | Calibrate home position |
 | `calibrate_min <motor>` | Calibrate min position |
 | `calibrate_max <motor>` | Calibrate max position |
-
+...
 Type `help` for a complete list of commands.
-
-## 📝 Calibration Workflow
-
-1. Position motors to desired home position
-2. Use `calibrate_home <motor>` to set current position as home
-3. Move to minimum position and use `calibrate_min <motor>`
-4. Move to maximum position and use `calibrate_max <motor>`
-
-## 🔌 Integration Example
-
-![Integration Example](https://cdn.instructables.com/F6F/TFXE/ILEIIJKG/F6FTFXEILEIIJKG.LARGE.jpg?auto=webp&frame=1&width=1024&height=1024&fit=bounds)
-
-## 📊 Example: Controlling Motors from Python
 
 ```python
 import serial
@@ -91,14 +69,7 @@ response = ser.readline().decode().strip()
 print(response)
 ```
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/stepper_control/issues).
-
 ## 📜 License
 
 This project is [MIT](LICENSE) licensed.
 
----
-
-Made with ❤️ by [Your Name]
