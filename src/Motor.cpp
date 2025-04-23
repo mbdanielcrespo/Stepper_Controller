@@ -1,4 +1,5 @@
-#include <Motor.hpp>
+#include "../inc/Motor.hpp"
+#include <limits.h>
 
 Motor::Motor() {
   _stepper = NULL;

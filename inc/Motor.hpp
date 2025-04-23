@@ -1,9 +1,8 @@
-#ifndef MOTOR_HPP
-#define MOTOR_HPP
+#pragma once
 
 #include <Arduino.h>
-#include <AccelStepper.h>
-#include <StepperConfig.hpp>
+#include "AccelStepper.h"
+#include "StepperConfig.hpp"
 
 class Motor {
   private:
@@ -60,5 +59,3 @@ class Motor {
     long getMinPosition();
     long getMaxPosition();
 };
-
-#endif

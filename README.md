@@ -1,59 +1,59 @@
 # 🤖 StepperController
 
-![Arduino Build](https://img.shields.io/badge/Arduino-Mega%202560-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Version](https://img.shields.io/badge/Version-1.0.0-red)
+![Arduino](https://img.shields.io/badge/Arduino-Mega%202560-blue)
+![Motors](https://img.shields.io/badge/Motors-NEMA%2017-red)
+![Drivers](https://img.shields.io/badge/Drivers-A4988-green)
+![Shield](https://img.shields.io/badge/Shield-RAMPS%201.4-orange)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-A powerful, flexible library for controlling multiple stepper motors through serial commands.
+A lightweight library for controlling stepper motors for 3D planar tilting applications.
 
-![Stepper Motors Banner](https://raw.githubusercontent.com/wiki/arduino-libraries/Stepper/Stepper_motors.jpg)
+## 🎯 Project Goal
 
+This library was developed to control a 3D planar tilting mechanism that interfaces with a 3D viewer. By sending simple serial commands, the system allows precise control of the tilting platform's orientation, creating an immersive physical representation of 3D models being viewed in software.
+
+## ✨ Core Features
+
+- 🎮 Control multiple NEMA 17 stepper motors via serial commands
+- 🔄 Simple command interface for external software integration
+- 📊 Set motor speeds and accelerations
+- 🔌 Designed for Arduino Mega 2560 with RAMPS 1.4 shield and A4988 drivers
 
 ## 🛠️ Hardware
 
-This library was designed and tested with:
+The system uses:
 
 - Arduino Mega 2560
 - RAMPS 1.4 shield
 - 4x NEMA 17 stepper motors
-- 4x A4988 stepper drivers
-
-![Hardware Setup](https://hackster.imgix.net/uploads/attachments/1007323/ramps_bb_bb_sA9AjuGBaN.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+- 4x A4988 stepper motor drivers
 
 ## 📦 Library Structure
 
 ```
 stepper_control/
 ├── include/           # Header files
-│   ├── StepperConfig.hpp
-│   ├── Motor.hpp
-│   └── StepperController.hpp
 ├── src/               # Implementation files
-│   ├── Motor.cpp
-│   └── StepperController.cpp
 ├── examples/          # Example sketches
-├── Makefile           # Build system
 └── stepper_control.ino # Main sketch
 ```
 
-## 🚀 Quick Start
-
-### Serial Commands
-
-Control your motors with these simple commands:
+## 🚀 Serial Commands
 
 | Command | Description |
 |---------|-------------|
 | `status` | Show motor status |
 | `move <motor> <steps>` | Move motor by steps |
 | `speed <motor> <speed>` | Set maximum speed |
-| `accel <motor> <accel>` | Set acceleration |
-| `home <motor>` | Home specific motor |
-| `calibrate_home <motor>` | Calibrate home position |
-| `calibrate_min <motor>` | Calibrate min position |
-| `calibrate_max <motor>` | Calibrate max position |
-...
+| `stop <motor>` | Stop specific motor |
+| `stop_all` | Stop all motors |
+| `emergency_stop` | Emergency stop all motors |
+
 Type `help` for a complete list of commands.
+
+## 🔄 Integration
+
+The library is designed to be controlled via serial commands from a 3D viewer application, allowing physical movement to be synchronized with on-screen models.
 
 ## 📜 License
 

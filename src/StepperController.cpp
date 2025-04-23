@@ -1,4 +1,4 @@
-#include <StepperController.hpp>
+#include "../inc/StepperController.hpp"
 
 StepperController::StepperController() {
   _motorCount = 0;

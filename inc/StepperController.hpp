@@ -1,9 +1,7 @@
-#ifndef STEPPER_CONTROLLER_HPP
-#define STEPPER_CONTROLLER_HPP
-
+#pragma once
 #include <Arduino.h>
-#include <Motor.hpp>
-#include <StepperConfig.hpp>
+#include "Motor.hpp"
+#include "StepperConfig.hpp"
 
 class StepperController {
   private:
@@ -41,4 +39,3 @@ class StepperController {
     bool processCommand(const char* command);
 };
 
-#endif
